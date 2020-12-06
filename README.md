@@ -5,9 +5,10 @@ This conversion tool allows you to convert Bible translation in one of the suppo
 
 Supported input formats are:
 
-Name   | Id    | File extension
--------|-------|---------------
-eSword | sword | *.bblx
+Name    | Id      | File extension
+--------|---------|---------------
+eSword  | sword   | *.bblx
+Zefania | zefania | *.xml
 
 Compilation steps:
 -------------------
@@ -30,6 +31,19 @@ Example of use:
 ```cmd
 php bib2xml.phar convert input_translation.bblx output_translation.xml sword
 ```
+
+Changelog:
+----------
+
+* v0.2.0.0 (2020-12-06):
+    - added Zefania XML input format support
+    - added additional trim rules for eSword input format 
+
+* v0.1.0.0 (2020-12-04):
+    - initial release (eSword input format support only)
+
+About
+-----
 
 Original author: [Rafał Toborek](https://kontakt.toborek.info)
 

@@ -61,6 +61,7 @@ class SwordInput implements InputConverter
         $output = str_replace([
             '{\cf15\I ',
             '{\cf6 ',
+            '{\cf15\I',
             '}',
             ']',
             '[',
@@ -68,6 +69,7 @@ class SwordInput implements InputConverter
             '\par',
             '--',
         ], [
+            '',
             '',
             '',
             '',
