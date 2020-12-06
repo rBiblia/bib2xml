@@ -8,10 +8,10 @@ use rBibliaBibleConverter\Command\ConvertCommand;
 use Symfony\Component\Console\Application;
 
 class AppRunner {
-    const VERSION = '0.1.0.0';
-    const NAME = 'bib2xml Converter';
+    const VERSION = '0.2.0.0';
+    const NAME = 'rBiblia bib2xml converter';
 
-    /** @var Application */
+    /** @var Application*/
     private $application;
 
     public function __construct()

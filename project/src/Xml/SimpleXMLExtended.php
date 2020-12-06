@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace rBibliaBibleConverter\XML;
+namespace rBibliaBibleConverter\Xml;
 
 use SimpleXMLElement;
 

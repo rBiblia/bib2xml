@@ -1,7 +1,7 @@
 <?php
 
 $distDir = './dist';
-$srcPath = './src';
+$srcPath = './project';
 $pharFile = 'bib2xml.phar';
 $fullPharPath = sprintf('%s/%s', $distDir, $pharFile);
 $fullGzPath = sprintf('%s/%s.gz', $distDir, $pharFile);
@@ -19,7 +19,7 @@ if (file_exists($fullGzPath)) {
 $phar = new Phar($fullPharPath);
 
 $phar->buildFromDirectory($srcPath);
-$phar->setDefaultStub('index.php', '/index.php');
+$phar->setDefaultStub('index.php');
 $phar->compress(Phar::GZ);
 
 printf('%s successfully created%s', $pharFile, PHP_EOL);

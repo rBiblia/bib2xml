@@ -8,7 +8,7 @@ use rBibliaBibleConverter\Value\Book;
 use rBibliaBibleConverter\Value\Chapter;
 use rBibliaBibleConverter\Value\Translation;
 use rBibliaBibleConverter\Value\Verse;
-use rBibliaBibleConverter\XML\SimpleXMLExtended;
+use rBibliaBibleConverter\Xml\SimpleXMLExtended;
 
 class XmlOutput implements OutputConverter
 {
