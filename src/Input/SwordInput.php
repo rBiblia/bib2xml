@@ -65,6 +65,8 @@ class SwordInput implements InputConverter
             ']',
             '[',
             ' (OMITTED TEXT)',
+            '\par',
+            '--',
         ], [
             '',
             '',
@@ -72,6 +74,8 @@ class SwordInput implements InputConverter
             '',
             '',
             '-',
+            '',
+            '',
         ], $text);
 
         // replace tabs with spaces
