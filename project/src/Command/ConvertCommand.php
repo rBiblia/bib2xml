@@ -44,13 +44,13 @@ class ConvertCommand extends Command
     {
         $this->output = $output;
 
-        $source = $input->getArgument('input');
-        $destination = $input->getArgument('output');
+        $source = realpath($input->getArgument('input'));
+        $destination = realpath($input->getArgument('output'));
         $format = $input->getArgument('format');
 
         // input file not found
         if (!file_exists($source)) {
-            return $this->displayError('File not found');
+            return $this->displayError(sprintf('File `%s` not found', $source));
         }
 
         // selected input converter not supported
