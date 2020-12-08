@@ -1,6 +1,6 @@
 <?php
 
-$distDir = './dist';
+$distDir = './bin';
 $srcPath = './project';
 $pharFile = 'bib2xml.phar';
 $fullPharPath = sprintf('%s/%s', $distDir, $pharFile);

@@ -21,14 +21,14 @@ You need to have PHP 7.4 or newer installed onto your system.
 - go back to the main folder
 - run `create-phar.bat` file
 
-`bib2xml.phar` file will be created in `./dist` folder.
+`bib2xml.phar` file will be created in `./bin` folder.
 
 Conversion steps:
 -----------------
 
 Converter requires PHP 7.4 installed onto your system to work.
 
-Example of use (from the `./dist` folder):
+Example of use (from the `./bin` folder):
 
 ```cmd
 php bib2xml.phar convert input_translation.bblx output_translation.xml sword
