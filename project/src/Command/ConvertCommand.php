@@ -35,7 +35,7 @@ class ConvertCommand extends Command
             ->setDescription('Converts given translation file to XML format')
             ->setHelp('Convert Bible translation in one of the supported formats to XML file used by rBiblia.')
             ->addArgument('input', InputArgument::REQUIRED, 'Input translation file (eg. translation.bblx)')
-            ->addArgument('output', InputArgument::REQUIRED, 'Output XML file (eg. translation.xml)')
+            ->addArgument('output', InputArgument::OPTIONAL, 'Output XML file (eg. translation.xml)')
             ->addArgument('format', InputArgument::OPTIONAL, 'Source file format', 'sword')
         ;
     }
@@ -44,9 +44,14 @@ class ConvertCommand extends Command
     {
         $this->output = $output;
 
-        $source = realpath($input->getArgument('input'));
-        $destination = realpath($input->getArgument('output'));
         $format = $input->getArgument('format');
+        $source = realpath($input->getArgument('input'));
+
+        // generate output filename
+        $destination = $input->getArgument('output');
+        if (empty($destination)) {
+            $destination = preg_replace('/\.[^.]+$/', '.xml', $source);
+        }
 
         // input file not found
         if (!file_exists($source)) {
@@ -62,6 +67,7 @@ class ConvertCommand extends Command
 
         $output->writeln([
             sprintf('Converting: <info>%s</info>', $source),
+            sprintf('Output: <info>%s</info>', $destination),
             sprintf('Format: <info>%s</info>', self::SUPPORTED_INPUT_FORMATS[$format]),
         ]);
 
