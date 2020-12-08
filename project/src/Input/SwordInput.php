@@ -7,6 +7,7 @@ namespace rBibliaBibleConverter\Input;
 use PDO;
 use rBibliaBibleConverter\Bible\Books;
 use rBibliaBibleConverter\Reader\InputReader;
+use rBibliaBibleConverter\Text\Sanitizer;
 use rBibliaBibleConverter\Value\About;
 use rBibliaBibleConverter\Value\Book;
 use rBibliaBibleConverter\Value\Chapter;
@@ -18,15 +19,19 @@ class SwordInput implements InputConverter
     /** @var InputReader */
     private $input;
 
+    /** @var Sanitizer */
+    private $sanitizer;
+
     /** @var PDO */
     private $pdo;
 
     /** @var Books */
     private $books;
 
-    public function __construct(InputReader $input, Books $books)
+    public function __construct(InputReader $input, Sanitizer $sanitizer, Books $books)
     {
         $this->input = $input;
+        $this->sanitizer = $sanitizer;
         $this->books = $books;
 
         $this->pdo = new PDO(sprintf('sqlite:%s', $input->getOriginalInput()));
@@ -44,7 +49,7 @@ class SwordInput implements InputConverter
                 $chapter = new Chapter($chapterId);
 
                 foreach ($verses as $verseId => $scripture) {
-                    $chapter->addVerse(new Verse($verseId, $this->trim($scripture)));
+                    $chapter->addVerse(new Verse($verseId, $this->sanitizer->sanitize($scripture)));
                 }
 
                 $book->addChapter($chapter);
@@ -54,36 +59,6 @@ class SwordInput implements InputConverter
         }
 
         return $translation;
-    }
-
-    private function trim(string $text): string
-    {
-        $output = str_replace([
-            '{\cf15\I ',
-            '{\cf6 ',
-            '{\cf15\I',
-            '}',
-            ']',
-            '[',
-            ' (OMITTED TEXT)',
-            '\par',
-            '--',
-        ], [
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '-',
-            '',
-            '',
-        ], $text);
-
-        // replace tabs with spaces
-        $output = preg_replace('/\s+/', ' ', $output);
-
-        return trim($output);
     }
 
     private function getAbout(): About

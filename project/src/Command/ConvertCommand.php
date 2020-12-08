@@ -8,6 +8,7 @@ use rBibliaBibleConverter\Bible\Books;
 use rBibliaBibleConverter\Input\InputConverter;
 use rBibliaBibleConverter\Output\XmlOutput;
 use rBibliaBibleConverter\Reader\File;
+use rBibliaBibleConverter\Text\Sanitizer;
 use rBibliaBibleConverter\Writer\FileWriter;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -71,7 +72,7 @@ class ConvertCommand extends Command
             'Reading input translation...',
         ]);
         /** @var InputConverter $inputConverter */
-        $inputConverter = new $inputConverterClass($file, new Books());
+        $inputConverter = new $inputConverterClass($file, new Sanitizer(), new Books());
         $translation = $inputConverter->getTranslation();
         $translation->sort();
 

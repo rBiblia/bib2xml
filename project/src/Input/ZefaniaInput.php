@@ -6,6 +6,7 @@ namespace rBibliaBibleConverter\Input;
 
 use rBibliaBibleConverter\Bible\Books;
 use rBibliaBibleConverter\Reader\InputReader;
+use rBibliaBibleConverter\Text\Sanitizer;
 use rBibliaBibleConverter\Value\About;
 use rBibliaBibleConverter\Value\Book;
 use rBibliaBibleConverter\Value\Chapter;
@@ -18,15 +19,19 @@ class ZefaniaInput implements InputConverter
     /** @var InputReader */
     private $input;
 
+    /** @var Sanitizer */
+    private $sanitizer;
+
     /** @var Books */
     private $books;
 
     /** @var SimpleXMLElement */
     private $xml;
 
-    public function __construct(InputReader $input, Books $books)
+    public function __construct(InputReader $input, Sanitizer $sanitizer, Books $books)
     {
         $this->input = $input;
+        $this->sanitizer = $sanitizer;
         $this->books = $books;
 
         $this->xml = simplexml_load_string($input->getContent());
@@ -49,7 +54,7 @@ class ZefaniaInput implements InputConverter
                 /** @var SimpleXMLElement $verseNode */
                 foreach ($chapterNode->VERS as $verseNode) {
                     $verseId = (int) $verseNode->attributes()['vnumber']->__toString();
-                    $chapter->addVerse(new Verse($verseId, $this->trim($verseNode->__toString())));
+                    $chapter->addVerse(new Verse($verseId, $this->sanitizer->sanitize($verseNode->__toString())));
                 }
 
                 $book->addChapter($chapter);
@@ -59,11 +64,6 @@ class ZefaniaInput implements InputConverter
         }
 
         return $translation;
-    }
-
-    private function trim(string $text): string
-    {
-        return trim($text);
     }
 
     private function getAbout(): About
