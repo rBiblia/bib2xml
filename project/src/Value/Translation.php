@@ -42,7 +42,7 @@ class Translation
 
         foreach (Books::ALIASES as $aliases) {
             foreach ($this->books as $bookId => $book) {
-                if (in_array($bookId, $aliases)) {
+                if (\in_array($bookId, $aliases, true)) {
                     $sortedBooks[$bookId] = $book;
 
                     break;

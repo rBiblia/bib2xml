@@ -25,9 +25,10 @@ class File implements InputReader
 
     public function getContent(): string
     {
-        if ($this->content === null) {
+        if (null === $this->content) {
             $this->content = file_get_contents($this->originalInput);
         }
+
         return $this->content;
     }
 

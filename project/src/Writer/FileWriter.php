@@ -17,7 +17,7 @@ class FileWriter implements OutputWriter
 
     public function write(string $filename): bool
     {
-        if (file_put_contents($filename, $this->converter->getContent()) === false) {
+        if (false === file_put_contents($filename, $this->converter->getContent())) {
             return false;
         }
 

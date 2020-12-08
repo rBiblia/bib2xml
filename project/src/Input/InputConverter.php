@@ -6,6 +6,7 @@ namespace rBibliaBibleConverter\Input;
 
 use rBibliaBibleConverter\Value\Translation;
 
-interface InputConverter {
+interface InputConverter
+{
     public function getTranslation(): Translation;
 }

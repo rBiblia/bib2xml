@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace rBibliaBibleConverter\Output;
 
-interface OutputConverter {
+interface OutputConverter
+{
     public function getContent(): string;
 }

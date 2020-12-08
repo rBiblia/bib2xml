@@ -32,7 +32,7 @@ class XmlOutput implements OutputConverter
         $aboutNode->addChild('shortname', $this->translation->getAbout()->getShortname());
         $aboutNode->addChild('date', $this->translation->getAbout()->getDate());
 
-        if ($this->translation->getAbout()->getNotice() !== '') {
+        if ('' !== $this->translation->getAbout()->getNotice()) {
             $xml->about->notice = null;
             $xml->about->notice->addCData($this->translation->getAbout()->getNotice());
         }

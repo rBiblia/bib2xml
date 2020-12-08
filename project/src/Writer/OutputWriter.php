@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace rBibliaBibleConverter\Writer;
 
-interface OutputWriter {
+interface OutputWriter
+{
     public function write(string $filename): bool;
 }

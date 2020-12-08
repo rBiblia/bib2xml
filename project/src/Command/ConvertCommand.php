@@ -21,13 +21,13 @@ class ConvertCommand extends Command
         'zefania' => 'Zefania XML',
     ];
 
-    /** @var OutputInterface */
-    private $output;
-
     /** @var string */
     protected static $defaultName = 'convert';
 
-    protected function configure()
+    /** @var OutputInterface */
+    private $output;
+
+    protected function configure(): void
     {
         $this
             ->setAliases(['c'])

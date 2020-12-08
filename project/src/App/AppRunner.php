@@ -7,11 +7,12 @@ namespace rBibliaBibleConverter\App;
 use rBibliaBibleConverter\Command\ConvertCommand;
 use Symfony\Component\Console\Application;
 
-class AppRunner {
+class AppRunner
+{
     const VERSION = '0.2.0.0';
     const NAME = 'rBiblia bib2xml converter';
 
-    /** @var Application*/
+    /** @var Application */
     private $application;
 
     public function __construct()
@@ -25,7 +26,7 @@ class AppRunner {
         $this->application->add($convertCommand);
     }
 
-    public function run()
+    public function run(): void
     {
         $this->application->run();
     }

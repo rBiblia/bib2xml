@@ -43,7 +43,7 @@ class ZefaniaInput implements InputConverter
 
             /** @var SimpleXMLElement $chapterNode */
             foreach ($bookNode->CHAPTER as $chapterNode) {
-                $chapterId = (int)$chapterNode->attributes()['cnumber']->__toString();
+                $chapterId = (int) $chapterNode->attributes()['cnumber']->__toString();
                 $chapter = new Chapter($chapterId);
 
                 /** @var SimpleXMLElement $verseNode */
