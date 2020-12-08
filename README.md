@@ -7,7 +7,7 @@ Supported input formats are:
 
 Name    | Id      | File extension
 --------|---------|---------------
-eSword  | sword   | *.bblx
+eSword  | sword   | *.bblx, *.mybible
 Zefania | zefania | *.xml
 
 Compilation steps:
@@ -17,7 +17,7 @@ You need to have PHP 7.4 or newer installed onto your system.
 
 - clone this repo
 - go to the `./project` folder
-- run `composer install -o`
+- run `composer install -o --no-dev`
 - go back to the main folder
 - run `create-phar.bat` file
 
