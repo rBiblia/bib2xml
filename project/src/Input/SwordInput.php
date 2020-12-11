@@ -49,10 +49,33 @@ class SwordInput implements InputConverter
                 $chapter = new Chapter($chapterId);
 
                 foreach ($verses as $verseId => $scripture) {
-                    $chapter->addVerse(new Verse($verseId, $this->sanitizer->sanitize($scripture)));
+                    $sanitizedScripture = $this->sanitizer->sanitize($scripture);
+
+                    $chapter->addVerse(new Verse($verseId, $sanitizedScripture));
+                }
+
+                if (count($chapter->getVerses()) === 0) {
+                    continue;
+                }
+
+                $isChapterEmpty = true;
+
+                /** @var Verse $chapterVerse */
+                foreach ($chapter->getVerses() as $chapterVerse) {
+                    if (!empty($chapterVerse->getContent())) {
+                        $isChapterEmpty = false;
+                    }
+                }
+
+                if ($isChapterEmpty) {
+                    continue;
                 }
 
                 $book->addChapter($chapter);
+            }
+
+            if (count($book->getChapters()) === 0) {
+                continue;
             }
 
             $translation->addBook($book);
