@@ -40,9 +40,9 @@ class Translation
     {
         $sortedBooks = [];
 
-        foreach (Books::ALIASES as $aliases) {
+        foreach (Books::ALIASES as $settings) {
             foreach ($this->books as $bookId => $book) {
-                if (\in_array($bookId, $aliases, true)) {
+                if (\in_array($bookId, $settings['aliases'], true)) {
                     $sortedBooks[$bookId] = $book;
 
                     break;

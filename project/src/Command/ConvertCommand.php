@@ -20,6 +20,7 @@ class ConvertCommand extends Command
     const SUPPORTED_INPUT_FORMATS = [
         'sword' => 'eSword',
         'zefania' => 'Zefania XML',
+        'word' => 'theWord',
     ];
 
     /** @var string */

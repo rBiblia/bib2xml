@@ -9,6 +9,7 @@ Name    | Id      | File extension
 --------|---------|---------------
 eSword  | sword   | *.bblx, *.mybible
 Zefania | zefania | *.xml
+theWord | word    | *.ot, *.nt, *.ont
 
 Compilation steps:
 -------------------

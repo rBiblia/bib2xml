@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace rBibliaBibleConverter\Reader;
 
+use App\Exception\FileIsEmptyException;
 use App\Exception\FileNotFoundException;
 
 class File implements InputReader
@@ -20,13 +21,17 @@ class File implements InputReader
             throw new FileNotFoundException($filename);
         }
 
+        if (0 === filesize($filename)) {
+            throw new FileIsEmptyException($filename);
+        }
+
         $this->originalInput = $filename;
     }
 
     public function getContent(): string
     {
         if (null === $this->content) {
-            $this->content = file_get_contents($this->originalInput);
+            $this->content = $this->removeBOM(file_get_contents($this->originalInput));
         }
 
         return $this->content;
@@ -35,5 +40,13 @@ class File implements InputReader
     public function getOriginalInput(): string
     {
         return $this->originalInput;
+    }
+
+    private function removeBOM(string $content): string
+    {
+        $bom = pack('H*', 'EFBBBF');
+        $content = preg_replace("/^$bom/", '', $content);
+
+        return $content;
     }
 }

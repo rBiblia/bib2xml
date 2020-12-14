@@ -54,7 +54,7 @@ class SwordInput implements InputConverter
                     $chapter->addVerse(new Verse($verseId, $sanitizedScripture));
                 }
 
-                if (count($chapter->getVerses()) === 0) {
+                if (0 === \count($chapter->getVerses())) {
                     continue;
                 }
 
@@ -74,7 +74,7 @@ class SwordInput implements InputConverter
                 $book->addChapter($chapter);
             }
 
-            if (count($book->getChapters()) === 0) {
+            if (0 === \count($book->getChapters())) {
                 continue;
             }
 
