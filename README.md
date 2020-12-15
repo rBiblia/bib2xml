@@ -38,13 +38,19 @@ php bib2xml.phar convert input_translation.bblx output_translation.xml sword
 Changelog:
 ----------
 
+* v0.3.0.0 (2020-12-15):
+    - added `theWord` input format support
+    - added text sanitizer for global use when parsing translations
+    - generate default output filename if no output given
+    - many internal improvements and fixes
+
 * v0.2.0.0 (2020-12-06):
-    - added Zefania XML input format support
+    - added `Zefania XML` input format support
     - added additional trim rules for eSword input format
     - directory structure fixes
 
 * v0.1.0.0 (2020-12-04):
-    - initial release (eSword input format support only)
+    - initial release (`eSword` input format support only)
 
 About
 -----
