@@ -117,11 +117,17 @@ class WordInput implements InputConverter
 
     private function getAbout(): About
     {
+        $name = '';
         preg_match('/short.title=(.*)/i', $this->input->getContent(), $matches);
-        $name = trim($matches[1]);
+        if (!empty($matches)) {
+            $name = trim($matches[1]);
+        }
 
+        $description = '';
         preg_match('/description=(.*)/i', $this->input->getContent(), $matches);
-        $description = trim($matches[1]);
+        if (!empty($matches)) {
+            $description = trim($matches[1]);
+        }
 
         return new About('', '', $name, $description, '', '', '');
     }
