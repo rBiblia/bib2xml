@@ -40,6 +40,15 @@ class Sanitizer
         '<CL>', // theWord
         '<Ts>', // theWord
         '<CM>', // theWord
+        '<i>', // theWord
+        '</i>', // theWord
+        '</sub>', // theWord
+        '<sub>', // theWord
+        '</sup>', // thWord
+        '<b>', // theWord
+        '</b>', // theWord
+        ' , ', // theWord
+        ' . ', // theWord
     ];
 
     const CHAR_REPLACE_TO = [
@@ -76,12 +85,32 @@ class Sanitizer
         ' ',
         '',
         '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        ', ',
+        '. ',
+    ];
+
+    const PATTERN_REPLACE_FROM = [
+        '/\<sup\>([0-9]+)\<\/sup\>/i',
+    ];
+
+    const PATTERN_REPLACE_TO = [
+        ' ',
     ];
 
     public function sanitize(string $text): string
     {
+        // remove leftovers using regex patterns
+        $output = preg_replace(self::PATTERN_REPLACE_FROM, self::PATTERN_REPLACE_TO, $text);
+
         // remove/convert leftovers
-        $output = str_replace(self::CHAR_REPLACE_FROM, self::CHAR_REPLACE_TO, $text);
+        $output = str_replace(self::CHAR_REPLACE_FROM, self::CHAR_REPLACE_TO, $output);
 
         // replace tabs with spaces
         $output = preg_replace('/\s+/', ' ', $output);
