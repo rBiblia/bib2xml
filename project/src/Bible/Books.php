@@ -2293,6 +2293,11 @@ class Books
                 'lao',
             ],
         ],
+        '3es' => [
+            'aliases' => [
+                '3es',
+            ],
+        ],
         '4es' => [
             'aliases' => [
                 '4es',

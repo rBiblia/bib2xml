@@ -21,6 +21,7 @@ class ConvertCommand extends Command
         'sword' => 'eSword',
         'zefania' => 'Zefania XML',
         'word' => 'theWord',
+        'tsv' => 'TSV (tab as a separator)',
     ];
 
     /** @var string */
@@ -62,7 +63,7 @@ class ConvertCommand extends Command
         // selected input converter not supported
         $inputConverterClass = sprintf('rBibliaBibleConverter\Input\%sInput', ucfirst($format));
         if (!class_exists($inputConverterClass)) {
-            return $this->displayError(sprintf('Output file format is not supported, supported formats are: <info>%s</info>',
+            return $this->displayError(sprintf('Input file format is not supported, supported formats are: <info>%s</info>',
                 implode(', ', array_keys(self::SUPPORTED_INPUT_FORMATS))));
         }
 

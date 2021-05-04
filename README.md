@@ -5,11 +5,12 @@ This conversion tool allows you to convert Bible translation in one of the suppo
 
 Supported input formats are:
 
-Name    | Id      | File extension
---------|---------|---------------
-eSword  | sword   | *.bblx, *.mybible
-Zefania | zefania | *.xml
-theWord | word    | *.ot, *.nt, *.ont
+Name               | Id      | File extension
+-------------------|---------|---------------
+eSword             | sword   | *.bblx, *.mybible
+Zefania            | zefania | *.xml
+theWord            | word    | *.ot, *.nt, *.ont
+tab as a separator | tsv     | *.tsv 
 
 Compilation steps:
 -------------------
@@ -38,6 +39,11 @@ php bib2xml.phar convert input_translation.bblx output_translation.xml sword
 Changelog:
 ----------
 
+* v0.4.0.0 (2021-05-04):
+    - added `tsv` input format support
+	- added support for `3es` book
+    - small internal fixes
+    
 * v0.3.0.0 (2020-12-15):
     - added `theWord` input format support
     - added text sanitizer for global use when parsing translations

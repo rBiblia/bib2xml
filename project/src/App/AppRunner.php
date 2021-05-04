@@ -9,7 +9,7 @@ use Symfony\Component\Console\Application;
 
 class AppRunner
 {
-    const VERSION = '0.3.0.0';
+    const VERSION = '0.4.0.0';
     const NAME = 'rBiblia bib2xml converter';
 
     /** @var Application */
