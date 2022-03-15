@@ -21,6 +21,7 @@ class Books
                 'vol1',
                 '1',
                 'rodz',
+                'Rdz',
             ],
             'chapters' => [
                 1 => 31,
@@ -86,6 +87,7 @@ class Books
                 'vol2',
                 '2',
                 'wyjscia',
+                'Wj',
             ],
             'chapters' => [
                 1 => 22,
@@ -141,6 +143,7 @@ class Books
                 'vol3',
                 '3',
                 'kapl',
+                'Kpł',
             ],
             'chapters' => [
                 1 => 17,
@@ -183,6 +186,7 @@ class Books
                 'vol4',
                 '4',
                 'liczb',
+                'Lb',
             ],
             'chapters' => [
                 1 => 54,
@@ -234,6 +238,7 @@ class Books
                 'vol5',
                 '5',
                 'powt pr',
+                'Pwt',
             ],
             'chapters' => [
                 1 => 46,
@@ -322,6 +327,7 @@ class Books
                 'vol7',
                 '7',
                 'sedz',
+                'Sdz',
             ],
             'chapters' => [
                 1 => 36,
@@ -357,6 +363,7 @@ class Books
                 'Księga Rut',
                 'vol8',
                 '8',
+                'Rt',
             ],
             'chapters' => [
                 1 => 22,
@@ -377,6 +384,7 @@ class Books
                 'vol9',
                 '9',
                 '1 sam',
+                '1Sm',
             ],
             'chapters' => [
                 1 => 28,
@@ -424,6 +432,7 @@ class Books
                 'vol10',
                 '10',
                 '2 sam',
+                '2Sm',
             ],
             'chapters' => [
                 1 => 27,
@@ -464,6 +473,7 @@ class Books
                 'vol11',
                 '11',
                 '1 krol',
+                '1Krl',
             ],
             'chapters' => [
                 1 => 53,
@@ -502,6 +512,7 @@ class Books
                 'vol12',
                 '12',
                 '2 krol',
+                '2Krl',
             ],
             'chapters' => [
                 1 => 18,
@@ -543,6 +554,7 @@ class Books
                 'vol13',
                 '13',
                 '1 kron',
+                '1Krn',
             ],
             'chapters' => [
                 1 => 54,
@@ -588,6 +600,7 @@ class Books
                 'vol14',
                 '14',
                 '2 kron',
+                '2Krn',
             ],
             'chapters' => [
                 1 => 17,
@@ -664,6 +677,7 @@ class Books
                 'vol16',
                 '16',
                 'nehem',
+                'Ne',
             ],
             'chapters' => [
                 1 => 11,
@@ -719,23 +733,27 @@ class Books
         ],
         '1ma' => [
             'aliases' => [
+                '1ma',
                 'ma1',
                 '72',
             ],
         ],
         '2ma' => [
             'aliases' => [
+                '2ma',
                 'ma2',
                 '73',
             ],
         ],
         '3ma' => [
             'aliases' => [
+                '3ma',
                 'ma3',
             ],
         ],
         '4ma' => [
             'aliases' => [
+                '4ma',
                 'ma4',
             ],
         ],
@@ -750,6 +768,7 @@ class Books
                 'vol18',
                 '18',
                 'hioba',
+                'Hi',
             ],
             'chapters' => [
                 1 => 22,
@@ -1018,6 +1037,7 @@ class Books
                 'vol21',
                 '21',
                 'kazn',
+                'Koh',
             ],
             'chapters' => [
                 1 => 18,
@@ -1045,6 +1065,7 @@ class Books
                 'vol22',
                 '22',
                 'piesn',
+                'Pnp',
             ],
             'chapters' => [
                 1 => 17,
@@ -1090,6 +1111,7 @@ class Books
                 'vol23',
                 '23',
                 'izaj',
+                'Iz',
             ],
             'chapters' => [
                 1 => 31,
@@ -1171,6 +1193,7 @@ class Books
                 'vol24',
                 '24',
                 'jer',
+                'Jr',
             ],
             'chapters' => [
                 1 => 19,
@@ -1237,6 +1260,7 @@ class Books
                 'Treny',
                 'vol25',
                 '25',
+                'Lm',
             ],
             'chapters' => [
                 1 => 22,
@@ -1263,6 +1287,7 @@ class Books
                 'vol26',
                 '26',
                 'ezech',
+                'Ez',
             ],
             'chapters' => [
                 1 => 28,
@@ -1325,6 +1350,7 @@ class Books
                 'Księga Daniela',
                 'vol27',
                 '27',
+                'Dn',
             ],
             'chapters' => [
                 1 => 21,
@@ -1381,6 +1407,7 @@ class Books
                 'vol29',
                 '29',
                 'joela',
+                'Jl',
             ],
             'chapters' => [
                 1 => 20,
@@ -1423,6 +1450,7 @@ class Books
                 'vol31',
                 '31',
                 'abd',
+                'Ab',
             ],
             'chapters' => [
                 1 => 21,
@@ -1457,6 +1485,7 @@ class Books
                 'vol33',
                 '33',
                 'mich',
+                'Mi',
             ],
             'chapters' => [
                 1 => 16,
@@ -1479,6 +1508,7 @@ class Books
                 'vol34',
                 '34',
                 'nahuma',
+                'Na',
             ],
             'chapters' => [
                 1 => 15,
@@ -1496,6 +1526,7 @@ class Books
                 'Księga Habakuka',
                 'vol35',
                 '35',
+                'Ha',
             ],
             'chapters' => [
                 1 => 17,
@@ -1514,6 +1545,7 @@ class Books
                 'vol36',
                 '36',
                 'sof',
+                'So',
             ],
             'chapters' => [
                 1 => 18,
@@ -1532,6 +1564,7 @@ class Books
                 'vol37',
                 '37',
                 'agg',
+                'Ag',
             ],
             'chapters' => [
                 1 => 15,
@@ -1541,6 +1574,7 @@ class Books
         'zec' => [
             'group' => self::GROUP_OT,
             'aliases' => [
+                'zec',
                 'zac',
                 'Zachariasza',
                 'zechariah',
@@ -1549,6 +1583,7 @@ class Books
                 'vol38',
                 '38',
                 'zach',
+                'Za',
             ],
             'chapters' => [
                 1 => 21,
@@ -1578,6 +1613,7 @@ class Books
                 'vol39',
                 '39',
                 'malach',
+                'Ml',
             ],
             'chapters' => [
                 1 => 14,
@@ -1596,6 +1632,7 @@ class Books
                 'Ewangelia Mateusza',
                 'vol40',
                 '40',
+                'Mt',
             ],
             'chapters' => [
                 1 => 25,
@@ -1639,6 +1676,7 @@ class Books
                 'vol41',
                 '41',
                 'marka',
+                'Mk',
             ],
             'chapters' => [
                 1 => 45,
@@ -1670,6 +1708,7 @@ class Books
                 'vol42',
                 '42',
                 'luk',
+                'Łk',
             ],
             'chapters' => [
                 1 => 80,
@@ -1709,6 +1748,7 @@ class Books
                 'vol43',
                 '43',
                 'jana',
+                'J',
             ],
             'chapters' => [
                 1 => 51,
@@ -1745,6 +1785,7 @@ class Books
                 'vol44',
                 '44',
                 'dzieje',
+                'Dz',
             ],
             'chapters' => [
                 1 => 26,
@@ -1788,6 +1829,7 @@ class Books
                 'vol45',
                 '45',
                 'rzym',
+                'Rz',
             ],
             'chapters' => [
                 1 => 32,
@@ -1820,6 +1862,7 @@ class Books
                 'vol46',
                 '46',
                 '1 kor',
+                '1Kor',
             ],
             'chapters' => [
                 1 => 31,
@@ -1852,6 +1895,7 @@ class Books
                 'vol47',
                 '47',
                 '2 kor',
+                '2Kor',
             ],
             'chapters' => [
                 1 => 24,
@@ -1879,6 +1923,7 @@ class Books
                 'List do Galacjan',
                 'vol48',
                 '48',
+                'Ga',
             ],
             'chapters' => [
                 1 => 24,
@@ -1900,6 +1945,7 @@ class Books
                 'vol49',
                 '49',
                 'efez',
+                'Ef',
             ],
             'chapters' => [
                 1 => 23,
@@ -1921,6 +1967,7 @@ class Books
                 'vol50',
                 '50',
                 'filip',
+                'Flp',
             ],
             'chapters' => [
                 1 => 30,
@@ -1960,6 +2007,7 @@ class Books
                 'vol52',
                 '52',
                 '1 tes',
+                '1Tes',
             ],
             'chapters' => [
                 1 => 10,
@@ -1981,6 +2029,7 @@ class Books
                 'vol53',
                 '53',
                 '2 tes',
+                '2Tes',
             ],
             'chapters' => [
                 1 => 12,
@@ -2000,6 +2049,7 @@ class Books
                 'vol54',
                 '54',
                 '1 tym',
+                '1Tm',
             ],
             'chapters' => [
                 1 => 20,
@@ -2022,6 +2072,7 @@ class Books
                 'vol55',
                 '55',
                 '2 tym',
+                '2Tm',
             ],
             'chapters' => [
                 1 => 18,
@@ -2041,6 +2092,7 @@ class Books
                 'vol56',
                 '56',
                 'tyt',
+                'Tt',
             ],
             'chapters' => [
                 1 => 16,
@@ -2051,6 +2103,7 @@ class Books
         'phm' => [
             'group' => self::GROUP_NT,
             'aliases' => [
+                'phm',
                 'plm',
                 'Filemon',
                 'philemon',
@@ -2059,6 +2112,7 @@ class Books
                 'vol57',
                 '57',
                 'filem',
+                'Flm',
             ],
             'chapters' => [
                 1 => 25,
@@ -2075,6 +2129,7 @@ class Books
                 'vol58',
                 '58',
                 'hebr',
+                'Hbr',
             ],
             'chapters' => [
                 1 => 14,
@@ -2103,6 +2158,7 @@ class Books
                 'vol59',
                 '59',
                 'jak',
+                'Jk',
             ],
             'chapters' => [
                 1 => 27,
@@ -2124,6 +2180,7 @@ class Books
                 'vol60',
                 '60',
                 '1 piotra',
+                '1P',
             ],
             'chapters' => [
                 1 => 25,
@@ -2145,6 +2202,7 @@ class Books
                 'vol61',
                 '61',
                 '2 piotra',
+                '2P',
             ],
             'chapters' => [
                 1 => 21,
@@ -2164,6 +2222,7 @@ class Books
                 'vol62',
                 '62',
                 '1 jana',
+                '1J',
             ],
             'chapters' => [
                 1 => 10,
@@ -2185,6 +2244,7 @@ class Books
                 'vol63',
                 '63',
                 '2 jana',
+                '2J',
             ],
             'chapters' => [
                 1 => 13,
@@ -2202,6 +2262,7 @@ class Books
                 'vol64',
                 '64',
                 '3 jana',
+                '3J',
             ],
             'chapters' => [
                 1 => 14,
@@ -2210,6 +2271,7 @@ class Books
         'jud' => [
             'group' => self::GROUP_NT,
             'aliases' => [
+                'jud',
                 'jde',
                 'Judy',
                 'jude',
@@ -2234,6 +2296,7 @@ class Books
                 'vol66',
                 '66',
                 'obj',
+                'Ap',
             ],
             'chapters' => [
                 1 => 20,

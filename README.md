@@ -10,7 +10,8 @@ Name               | Id      | File extension
 eSword             | sword   | *.bblx, *.mybible
 Zefania            | zefania | *.xml
 theWord            | word    | *.ot, *.nt, *.ont
-tab as a separator | tsv     | *.tsv 
+tab as a separator | tsv     | *.tsv
+MyBible (Android)  | mybible | *.SQLite3 
 
 Compilation steps:
 -------------------

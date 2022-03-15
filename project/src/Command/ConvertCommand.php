@@ -22,6 +22,7 @@ class ConvertCommand extends Command
         'zefania' => 'Zefania XML',
         'word' => 'theWord',
         'tsv' => 'TSV (tab as a separator)',
+        'mybible' => 'MyBible',
     ];
 
     /** @var string */

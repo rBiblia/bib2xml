@@ -35,7 +35,7 @@ class WordInput implements InputConverter
     {
         $translation = new Translation($this->getAbout());
 
-        $contentAsArray = explode(PHP_EOL, $this->input->getContent());
+        $contentAsArray = explode(\PHP_EOL, $this->input->getContent());
         $groupType = $this->getInputType($this->input->getOriginalInput());
         $contentIndex = -1;
 
@@ -101,7 +101,7 @@ class WordInput implements InputConverter
     {
         $results = [];
 
-        $group = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+        $group = strtolower(pathinfo($fileName, \PATHINFO_EXTENSION));
 
         if (Books::GROUP_OT !== $group && Books::GROUP_NT !== $group) {
             $results[] = Books::GROUP_NT;

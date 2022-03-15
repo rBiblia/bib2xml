@@ -35,7 +35,7 @@ class TsvInput implements InputConverter
     {
         $translationArray = [];
 
-        $content = explode(PHP_EOL, $this->input->getContent());
+        $content = explode(\PHP_EOL, $this->input->getContent());
         foreach ($content as $line) {
             if (empty(trim($line))) {
                 continue;
