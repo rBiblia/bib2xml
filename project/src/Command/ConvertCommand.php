@@ -17,7 +17,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class ConvertCommand extends Command
 {
-    const SUPPORTED_INPUT_FORMATS = [
+    public const SUPPORTED_INPUT_FORMATS = [
         'sword' => [
             'name' => 'eSword',
             'ext' => ['bblx', 'mybible'],

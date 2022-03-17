@@ -6,7 +6,7 @@ namespace rBibliaBibleConverter\Text;
 
 class Sanitizer
 {
-    const CHAR_REPLACE_FROM = [
+    public const CHAR_REPLACE_FROM = [
         '{\cf15\I ',
         '{\cf6 ',
         '{\cf15\I',
@@ -51,7 +51,7 @@ class Sanitizer
         ' . ', // theWord
     ];
 
-    const CHAR_REPLACE_TO = [
+    public const CHAR_REPLACE_TO = [
         '',
         '',
         '',
@@ -96,11 +96,11 @@ class Sanitizer
         '. ',
     ];
 
-    const PATTERN_REPLACE_FROM = [
+    public const PATTERN_REPLACE_FROM = [
         '/\<sup\>([0-9]+)\<\/sup\>/i',
     ];
 
-    const PATTERN_REPLACE_TO = [
+    public const PATTERN_REPLACE_TO = [
         ' ',
     ];
 

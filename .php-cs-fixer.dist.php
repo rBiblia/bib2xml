@@ -4,7 +4,7 @@ $finder = PhpCsFixer\Finder::create()
     ->path('project/src/')
     ->in(__DIR__);
 
-return PhpCsFixer\Config::create()
+return  (new PhpCsFixer\Config())
     ->setRiskyAllowed(true)
     ->setRules([
         '@PHP71Migration' => true,
@@ -14,8 +14,8 @@ return PhpCsFixer\Config::create()
         'combine_consecutive_unsets' => true,
         // one should use PHPUnit methods to set up expected exception instead of annotations
         'heredoc_to_nowdoc' => true,
-        'no_extra_consecutive_blank_lines' => ['break', 'continue', 'extra', 'return', 'throw', 'use', 'parenthesis_brace_block', 'square_brace_block', 'curly_brace_block'],
-        'no_short_echo_tag' => true,
+        'no_extra_blank_lines' => true,
+        'echo_tag_syntax' => ['format' => 'long'],
         'no_useless_else' => true,
         'no_useless_return' => true,
         'ordered_class_elements' => true,

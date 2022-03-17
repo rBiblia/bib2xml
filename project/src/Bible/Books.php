@@ -6,10 +6,10 @@ namespace rBibliaBibleConverter\Bible;
 
 class Books
 {
-    const GROUP_OT = 'ot';
-    const GROUP_NT = 'nt';
+    public const GROUP_OT = 'ot';
+    public const GROUP_NT = 'nt';
 
-    const ALIASES = [
+    public const ALIASES = [
         'gen' => [
             'group' => self::GROUP_OT,
             'aliases' => [
