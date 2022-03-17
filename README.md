@@ -16,7 +16,7 @@ MyBible (Android)  | mybible | *.SQLite3
 Compilation steps:
 -------------------
 
-You need to have PHP 7.4 or newer installed onto your system.
+You need to have PHP v8 or newer installed onto your system.
 
 - clone this repo
 - go to the `./project` folder
@@ -29,7 +29,7 @@ You need to have PHP 7.4 or newer installed onto your system.
 Conversion steps:
 -----------------
 
-Converter requires PHP 7.4 installed onto your system to work.
+Converter requires PHP v8 installed onto your system to work.
 
 Example of use (from the `./bin` folder):
 
@@ -37,8 +37,21 @@ Example of use (from the `./bin` folder):
 php bib2xml.phar convert input_translation.bblx output_translation.xml sword
 ```
 
+or just
+
+```cmd
+php bib2xml.phar convert input_translation.bblx
+```
+
 Changelog:
 ----------
+
+* v0.5.0.0 (2022-03-17):
+    - upgraded PHP to v8
+    - added `mybible` input format support
+    - added input file format auto-detection
+    - minor fixes and improvements
+    - added `bib2xml.bat` helper in `bin` folder
 
 * v0.4.0.0 (2021-05-04):
     - added `tsv` input format support
