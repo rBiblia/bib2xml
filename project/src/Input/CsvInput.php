@@ -6,9 +6,9 @@ namespace rBibliaBibleConverter\Input;
 
 use rBibliaBibleConverter\Input\Traits\CharSeparatedTrait;
 
-class TsvInput implements InputConverter
+class CsvInput implements InputConverter
 {
     use CharSeparatedTrait;
 
-    private string $separator = "\t";
+    private string $separator = ';';
 }

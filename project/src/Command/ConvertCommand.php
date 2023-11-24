@@ -34,6 +34,10 @@ class ConvertCommand extends Command
             'name' => 'TSV (tab as a separator)',
             'ext' => ['tsv'],
         ],
+        'csv' => [
+            'name' => 'CSV (comma as a separator)',
+            'ext' => ['csv'],
+        ],
         'mybible' => [
             'name' => 'MyBible',
             'ext' => ['sqlite3'],

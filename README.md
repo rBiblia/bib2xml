@@ -5,13 +5,14 @@ This conversion tool allows you to convert Bible translation in one of the suppo
 
 Supported input formats are:
 
-Name               | Id      | File extension
--------------------|---------|---------------
-eSword             | sword   | *.bblx, *.mybible
-Zefania            | zefania | *.xml
-theWord            | word    | *.ot, *.nt, *.ont
-tab as a separator | tsv     | *.tsv
-MyBible (Android)  | mybible | *.SQLite3 
+Name                 | Id      | File extension
+---------------------|---------|---------------
+eSword               | sword   | *.bblx, *.mybible
+Zefania              | zefania | *.xml
+theWord              | word    | *.ot, *.nt, *.ont
+tab as a separator   | tsv     | *.tsv
+comma as a separator | csv     | *.csv  
+MyBible (Android)    | mybible | *.SQLite3 
 
 Compilation steps:
 -------------------
@@ -46,6 +47,9 @@ php bib2xml.phar convert input_translation.bblx
 Changelog:
 ----------
 
+* v0.6.0.0 (2023-11-24):
+    - added `csv` input format support
+
 * v0.5.0.0 (2022-03-17):
     - upgraded PHP to v8
     - added `mybible` input format support
@@ -75,7 +79,7 @@ Changelog:
 About
 -----
 
-Original author: [Rafał Toborek](https://kontakt.toborek.info)
+Author: [Rafał Toborek](https://kontakt.toborek.info)
 
 Feel free to contribute and [support my work](https://rbiblia.toborek.info/donation/).
 
