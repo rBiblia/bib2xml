@@ -53,6 +53,7 @@ Changelog:
 * v0.6.1.0 (2024-08-26):
     - upgraded PHP to v8.2
     - added GitHub Action for release automation
+    - fix incorrect namespace in exception classes
 
 * v0.6.0.0 (2023-11-24):
     - added `csv` input format support
