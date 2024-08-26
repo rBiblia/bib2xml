@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace rBibliaBibleConverter\Reader;
 
-use App\Exception\FileIsEmptyException;
-use App\Exception\FileNotFoundException;
+use rBibliaBibleConverter\Exception\FileIsEmptyException;
+use rBibliaBibleConverter\Exception\FileNotFoundException;
 
 class File implements InputReader
 {
