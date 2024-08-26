@@ -1,0 +1,34 @@
+name: Build on tag creation
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    name: Build bib2xml.phar and update release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up PHP v8.2
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          ini-values: phar.readonly=Off
+
+      - name: Build project
+        run: |
+          php -f create-phar.php
+          mv bin/bib2xml.phar.gz bin/bib2xml.phar
+
+      - name: Update release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: bin/bib2xml.phar
+          asset_name: bib2xml.phar
+          tag: ${{ github.ref }}
+          overwrite: true
