@@ -1,23 +1,26 @@
 rBiblia bib2xml converter
 =========================
 
-This conversion tool allows you to convert Bible translation in one of the supported formats to XML format used by rBiblia. Remaining conversion from *.xml to *.bibx can be done using free [xml2bibx](https://github.com/rBiblia/xml2bibx) translations converter.
+This conversion tool enables you to convert a Bible translation (in one of the supported formats) to the XML format used by rBiblia. The subsequent conversion from *.xml to a *.bibx file can be accomplished using the free [xml2bibx](https://github.com/rBiblia/xml2bibx) translations converter.
 
 Supported input formats are:
 
-Name                 | Id      | File extension
----------------------|---------|---------------
-eSword               | sword   | *.bblx, *.mybible
-Zefania              | zefania | *.xml
-theWord              | word    | *.ot, *.nt, *.ont
-tab as a separator   | tsv     | *.tsv
-comma as a separator | csv     | *.csv  
-MyBible (Android)    | mybible | *.SQLite3 
+| Name                 | Id      | File extension    |
+|----------------------|---------|-------------------|
+| eSword               | sword   | *.bblx, *.mybible |
+| Zefania              | zefania | *.xml             |
+| theWord              | word    | *.ot, *.nt, *.ont |
+| tab as a separator   | tsv     | *.tsv             |
+| comma as a separator | csv     | *.csv             |
+| MyBible (Android)    | mybible | *.SQLite3         |
 
 Compilation steps:
 -------------------
 
-You need to have PHP v8 or newer installed onto your system.
+> [!NOTE]
+> Compiled `bib2xml.phar` file can be downloaded directly from the [GitHub Releases page](https://github.com/rBiblia/bib2xml/releases). To use the converter, PHP v8.2 must be installed on your operating system.
+
+You need to have PHP v8.2 or newer installed onto your system.
 
 - clone this repo
 - go to the `./project` folder
@@ -30,7 +33,7 @@ You need to have PHP v8 or newer installed onto your system.
 Conversion steps:
 -----------------
 
-Converter requires PHP v8 installed onto your system to work.
+Converter requires PHP v8.2 installed onto your system to work.
 
 Example of use (from the `./bin` folder):
 
@@ -49,7 +52,7 @@ Changelog:
 
 * v0.6.1.0 (2024-08-26):
     - upgraded PHP to v8.2
-    - added GitHub Action for build automation
+    - added GitHub Action for release automation
 
 * v0.6.0.0 (2023-11-24):
     - added `csv` input format support
